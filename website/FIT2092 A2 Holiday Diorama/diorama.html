@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Witch's Garden</title>
+    <link rel="stylesheet" href="diorama.css">
+</head>
+
+<body>
+    <video autoplay muted loop id="vid">
+        <source src="images/background.mp4" type="video/mp4">
+    </video>
+
+    <div class="scene">
+        <img class="face floor" src="images/floor.png"/>
+        <img class="face floor-front" src="images/floor-front.png"/>
+        <img class="face floor-side" src="images/floor-side.png"/>
+        <img class="face floor-side1" src="images/floor-side.png"/>
+        
+        <div class="house">
+            <img class="face house-front" src="images/house-front.png"/>
+            <img class="face house-front-door" src="images/house-front-door.png"/>
+            <img class="face house-side" src="images/house-side.png"/>
+            <img class="face house-side1" src="images/house-side.png"/>
+            
+            <img class="face house-roof" src="images/house-roof.png"/>
+            <img class="face house-roof1" src="images/house-roof1.png"/>
+            
+            <img class="face shadow" src="images/shadow.png" width="350px"/>
+            
+            <div class="face house-weathervane">
+                <img class="face weathervane" src="images/weathervane.png"/>
+                <img class="face weathervane1" src="images/weathervane.png"/>
+            </div>
+        </div>
+        
+        <div class="gates">
+            <img class="face gate-back" src="images/gate-back.png"/> 
+            <img class="face gate-side" src="images/gate-side.png"/>
+            <img class="face gate-side1" src="images/gate-side.png"/>
+        </div>
+
+        <div class="object pet">
+            <img class="face front" src="images/pet.gif" height="120px" />           
+            <img class="face shadow" src="images/shadow.png" />
+        </div>
+        
+        <div class="object bush">
+            <img class="face front" src="images/bush.png" />
+            <img class="face front ghost" src="images/bush-ghost.png"/>
+            <img class="face shadow" src="images/shadow.png" width="250px"/>
+        </div>
+        
+        <div class="object tombstone">
+            <img class="face" src="images/tombstone.png"/>  
+        </div>
+        <div class="object hand">
+            <img class="face front" src="images/tombstone-hand.png" onclick="playAudio('audio/zombie.wav')"/>
+            <img class="face shadow" src="images/shadow.png"/>
+        </div>
+        
+        <div class="object cauldron" onclick="playAudio('audio/bubble.wav')">
+            <img class="face cauldron1" src="images/cauldron-face.png"/>
+            <img class="face cauldron2" src="images/cauldron-face1.png"/>
+            <img class="face cauldron3" src="images/cauldron-face.png"/>
+            <img class="face cauldron4" src="images/cauldron-face1.png"/>
+            <img class="face potion" src="images/cauldron-potion.png" height="124px"/>
+            <img class="face shadow" src="images/shadow.png" width="230px"/>
+        </div>
+        
+        <div class="object bubbles">
+            <img class="face front" src="images/cauldron-bubbles.gif" height="100px"/>
+        </div>
+        
+        <div class="object lamppost">
+            <img class="face lamppost-base" src="images/lamppost.gif"/>
+            <img class="face front" src="images/lamppost-light.png"/>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="diorama.js"></script>
+</body>
+
+</html>

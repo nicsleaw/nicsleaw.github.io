@@ -1,0 +1,252 @@
+* {
+    transform-style: preserve-3d;
+    user-select: none;
+}
+
+/* ANIMATION */
+@keyframes ghostPeek {
+    0% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), 0px, var(--tz)); }
+    30% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), -100px, var(--tz)); }
+    50% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), -100px, var(--tz)) skewX(10deg); }
+    70% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), -100px, var(--tz)) skewX(-5deg); }
+    100% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), -0px, var(--tz));}
+}
+@keyframes weathervaneSpin {
+    0% {transform: rotateX(var(--rx)) rotateY(0deg) rotateZ(var(--rz)) translate3d(var(--tx), var(--ty), var(--tz)); }
+    50% {transform: rotateX(var(--rx)) rotateY(90deg) rotateZ(var(--rz)) translate3d(var(--tx), var(--ty), var(--tz)); }
+    100% {transform: rotateX(var(--rx)) rotateY(0deg) rotateZ(var(--rz)) translate3d(var(--tx), var(--ty), var(--tz)); }
+}
+@keyframes handBob {
+    0% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), 0px, var(--tz)); }
+    50% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), 20px, var(--tz)); }
+    100% {transform: rotateX(var(--rx)) rotateY(var(--ry)) rotateZ(var(--rz)) translate3d(var(--tx), 0px, var(--tz)); }
+}
+@keyframes doorOpen {
+    0% {--ry: 0deg;
+    --tx: 250px; --ty: -50px;}
+    50% {--ry: 270deg;
+    --tx: 50px; --ty: -50px; --tz: -200px; }
+    100% {--ry: 0deg;
+    --tx: 250px; --ty: -50px;}
+} 
+@keyframes lightDim {
+    0% {opacity: 1; }
+    50% {opacity: 0.5; }
+    100% {opacity: 1; }
+}
+
+/* GENERAL */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: hidden;
+}
+#vid {
+  height: 100vh;
+}
+.scene, .object, .face {
+    position: absolute;
+    --rx: 0deg; --ry: 0deg; --rz: 0deg; 
+    --tx: 0px; --ty: 0px; --tz: 0px;
+    
+    transform: rotateX( var(--rx) ) rotateY( var(--ry) ) rotateZ( var(--rz) ) translate3d( var(--tx), var(--ty), var(--tz) );
+}
+.face {
+    box-shadow: 0 0;
+    outline: 1px solid transparent;
+}
+.scene {
+    width: 800px; height: 450px;
+    --rx: -20deg; --ry: -20deg;
+}
+
+/* FACES - FLOOR */
+.floor {
+    --rx: 90deg;
+}
+.floor-front {
+    --ty: 300px; --tz: 300px;
+}
+.floor-side {
+    --ry: 90deg; 
+    --ty: 300px; --tz: 500px;
+}
+.floor-side1 {
+    --ry: 90deg;
+    --ty: 300px; --tz: -300px;
+}
+
+/* HOUSE */
+.house-front {
+    --tx: 250px; --ty:-50px;
+}
+.house-front-door {
+    --rx: 0deg; --ry: 0deg; --rz: 0deg;
+    --tx: 250px; --ty: -50px; --tz: 0px;
+}
+.house-front-door:hover {
+    animation: doorOpen 3s ease 0s infinite;
+}
+.house-side {
+    transform: rotateY( var(--ry) ) rotateX( var(--rx) ) rotateZ( var(--rz) ) translate3d( var(--tx), var(--ty), var(--tz) );
+    
+    --ry: 90deg; --rx: 18deg;
+    --tx: 100px; --ty: 110px; --tz: 211px;
+    transform-origin: 50% 100% 0px;
+}
+.house-side1 {
+    transform: rotateY( var(--ry) ) rotateX( var(--rx) ) rotateZ( var(--rz) ) translate3d( var(--tx), var(--ty), var(--tz) );
+    
+    --ry: -90deg; --rx: 18deg;
+    --tx: -99px; --ty: -80px; --tz: -361px;
+    transform-origin: 50% 100% 0px;
+}
+.house .shadow {
+    --rx: 90deg;
+    --tx: 225px; --ty: -90px; --tz: -125px;
+}
+.house-roof {
+    transform: rotateY( var(--ry) ) rotateX( var(--rx) ) rotateZ( var(--rz) ) translate3d( var(--tx), var(--ty), var(--tz) );
+    --rx: 56deg; --ry: 90deg;
+    --tx: 100px; --ty: 308px; --tz: 388px;
+    transform-origin: 50% 100% 0px;
+}
+.house-roof1 {
+    transform: rotateY( var(--ry) ) rotateX( var(--rx) ) rotateZ( var(--rz) ) translate3d( var(--tx), var(--ty), var(--tz) );
+    --rx: -56deg; --ry: 90deg;
+    --tx: 100px; --ty: -172px; --tz: -64px;
+    transform-origin: 50% 100% 0px;
+}
+.house-weathervane {
+    --tx: 480px; --ty: -70px; --tz: -100px;
+}
+.weathervane:hover {
+    animation: weathervaneSpin 3s ease 0s infinite;
+}
+.weathervane1:hover{
+    animation: weathervaneSpin 3s ease 0s infinite;
+}
+.weathervane1 {
+    --rx: 0deg; --ry: 90deg; --rz: 0deg;
+}
+
+/* GATE */
+.gate-back {
+    --ty: 150px; --tz: -300px;
+}
+.gate-side {
+    --ry: 90deg;
+    --ty: 150px; --tz: -300px;    
+}
+.gate-side1 {
+    --ry: 90deg;
+    --ty: 150px; --tz: 500px;
+}
+
+/* OBJECTS - PET */
+.pet {
+    width: 50px; height: 85px;
+    --tx: 280px; --ty: 180px; --tz: 160px;
+    transition: transform 3s ease;
+}
+.pet .front {
+    --ry: 20deg; 
+    --tz: 25px;
+}
+.pet .shadow {
+    --rx: 90deg;
+    --tx: -25px;  --tz: -70px;
+}
+
+/* BUSH / GHOST */
+.ghost{
+    --tz: -20px;
+}
+.bush {
+    --tx: 550px; --ty: 130px; --tz: -70px;
+}
+.bush .front {
+    --ry: 20deg; 
+}
+.bush:hover .ghost {
+    animation: ghostPeek 5s ease 0s 1;
+} 
+.bush .shadow {
+    --rx: 90deg;
+    --tx: -30px; --ty: 0px; --tz: -40px;
+}
+
+/* TOMBSTONE / ZOMBIE HAND */
+.tombstone{
+    --tx: 90px; --ty: 150px; --tz: 0px;
+}
+.hand {
+    --ry: 20deg;
+    --ty: 180px; --tz: 150px; --tx: 70px; 
+}
+.hand .front:hover {
+    animation: handBob 3s ease 0s infinite;
+}
+.hand .shadow {
+    --rx: 90deg; --tx: -15px; --tz: -70px;
+}
+
+/* CAULDRON / POTION */
+.cauldron1 {
+    --rx: -11deg;
+    --tx: 470px; --ty: 160px; --tz: 240px;
+}
+.cauldron2 {
+    transform: rotateY( var(--ry) ) rotateX( var(--rx) ) rotateZ( var(--rz) ) translate3d( var(--tx), var(--ty), var(--tz) );
+    --rx: -11deg;  --ry: 90deg;
+    --tx: -150px; --ty: 98px; --tz: 557px;
+}
+.cauldron3 {
+    --rx: 11deg;
+    --tx: 470px; --ty: 217px; --tz: 51px;
+}
+.cauldron4 {
+    transform: rotateY( var(--ry) ) rotateX( var(--rx) ) rotateZ( var(--rz) ) translate3d( var(--tx), var(--ty), var(--tz) );
+    --rx: 11deg; --ry: 90deg;
+    --tx: -150px; --ty: 279px;  --tz: 369px;
+}
+.cauldron .shadow {
+    --rx: 90deg;
+    --tx: 440px; --ty: 150px; --tz: -185px;
+}
+
+.bubbles {
+    --rx: 0deg; --ry: 0deg; --rz: 0deg;
+    --tx: 510px;  --ty: 120px; --tz: 140px;
+}
+.bubbles:hover {
+    filter: hue-rotate(90deg); 
+    transition: 2s ease;
+}
+.bubbles .front {
+    --ry: 20deg;
+}
+
+.potion {
+    --rx: 90deg;
+    --tx: 485px; --ty: 148px;  --tz: -160px;
+}
+.potion:hover {
+    filter: hue-rotate(90deg); 
+    transition: 2s ease;
+}
+.potion:active {
+    animation: lightDim 2s ease 0s infinite;
+}
+
+/* LAMPPOST */
+.lamppost {
+    --tx: 50px; --ty: -100px;  --tz: -140px;
+}
+.lamppost .front:hover {
+    animation: lightDim 3s ease 0s infinite;
+}

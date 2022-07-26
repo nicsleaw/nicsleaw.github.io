@@ -1,0 +1,314 @@
+/* A N I M A T I O N */
+@keyframes rainbow {
+    0% {background-color: palevioletred;}
+    25% {background-color: darkseagreen;}
+    50% {background-color: lightblue;}
+    75% {background-color: mediumpurple;}
+    100% {background-color: hotpink;}}
+@keyframes spaced {
+    from {letter-spacing: ;}
+    to {letter-spacing: 1.5px;}}
+
+
+/* S H A R E D   P A G E   S T Y L E S 
+font-family: 'Arvo', serif;
+font-family: 'Raleway', sans-serif;     */
+body {
+    margin: 0px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    color: #333333; }
+
+header, section, footer {
+    padding: 50px 0px; }
+
+h1 {font-family: 'Arvo', serif;
+    font-size: 40px;}
+h2 {font-family: 'Raleway', sans-serif;
+    font-size: 32px; }
+
+div { 
+    width: 900px;
+    margin: 0px auto; }
+
+a { text-decoration: none; }
+a:hover { 
+    text-decoration: underline; 
+    animation-name: spaced;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;}
+
+ul {
+    position: fixed;
+    right: 20px;
+    top: 150px;
+    width: auto;
+    height: auto;
+    text-align: }
+
+
+/* H E A D E R*/
+header {
+    background-color: #333333;
+    background-image: url(project/header.jpg);
+    background-size: cover;
+    color: #ffffff;
+    padding: 200px 0; 
+    padding-bottom: 80px;}
+
+header h1 {
+    font-family: 'Arvo', serif;
+    font-size: 45px;
+    font-weight: bold;
+    line-height: 30px;
+    position: absolute;
+        top: 35px;
+        left: 150px; }
+
+header a {color: #ffffff; }
+
+header h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 35px; 
+    font-weight: bold;}
+header p {
+    padding-left: 30px;}
+
+header .button {
+    border: 2px solid white;
+    padding: 10px 15px;
+    background: transparent;
+    color: white; }
+/* NAV */
+header nav {
+    line-height: 50px;
+    letter-spacing: 1px;
+    text-align: right;
+    position: absolute;
+        top: 40px;
+        right: 20px; }
+header nav a {
+    font-weight: bold; }
+
+header nav ul {
+    list-style: none; }
+header nav li {
+    display: list-item;
+    margin-left: 15px }
+
+header img {
+    width: 80px;
+    height: 80px;
+    margin: 1em 5px;}
+header {overflow: hidden;}
+
+
+/* R E D */
+#red {
+    background-image: url(project/red.jpg);
+    background-size: cover;
+    overflow: auto;
+    background-color: #ff6666;
+    color: white;
+    padding-right: 300px;}
+
+#red h1 {
+    text-shadow: 5px 5px #CC3333;}
+#red h2 {
+    font-size: 30px;
+    color: #990000;}
+#red img {
+    width: 100px;
+    height: 100px;}
+
+#red figcaption {
+    width: 600px;
+    font-size: 25px;}
+
+
+/* O R A N G E */
+#orange {
+    background-image: url(project/orange.jpg);
+    background-size: cover;
+    background-color: #ff9966;
+    color: white;
+    text-align: right;
+    padding-left: 100px;}
+
+#orange h1 {
+    text-shadow: 5px 5px #CC6633;}
+#orange h2 {
+    font-size: 30px;
+    color: #993300;}
+#orange img {
+    width: 100px;
+    height: 100px;}
+
+#orange figcaption {
+    padding-left: 230px;
+    width: 600px;
+    font-size: 25px;}
+
+
+/* Y E L L O W */
+#yellow {
+    background-image: url(project/yellow.jpg);
+    background-size: cover;
+    background-color: #FFCC00;
+    color: white;
+    padding-right: 300px;}
+
+#yellow h1 {
+    text-shadow: 5px 5px #CC9900;}
+#yellow h2 {
+    font-size: 30px;
+    color: #996633;}
+#yellow img {
+    width: 100px;
+    height: 100px;}
+
+#yellow figcaption {
+    width: 600px;
+    font-size: 25px;}
+
+
+/* G R E E N */
+#green {
+    background-image: url(project/green.jpg);
+    background-size: cover;
+    background-color: #009999;
+    color: white;
+    text-align: right;
+    padding-left: 100px;}
+
+#green h1 {
+    text-shadow: 5px 5px #006666;}
+#green h2 {
+    font-size: 30px;
+    color: #003333;}
+#green img {
+    width: 100px;
+    height: 100px;}
+
+#green figcaption {
+    padding-left: 230px;
+    width: 600px;
+    font-size: 25px;}
+
+
+/* B L U E */
+#blue {
+    background-image: url(project/blue.jpg);
+    background-size: cover;
+    background-color: #99CCFF;
+    color: white;
+    padding-right: 300px;}
+
+#blue h1 {
+    text-shadow: 5px 5px #3399FF;}
+#blue h2 {
+    font-size: 30px;
+    color: #003399;}
+#blue img {
+    width: 100px;
+    height: 100px;}
+
+#blue figcaption {
+    width: 600px;
+    font-size: 25px;}
+
+
+/* I N D I G O */
+#indigo {
+    background-image: url(project/indigo.jpg);
+    background-size: cover;
+    background-color: #9999FF;
+    color: white;
+    text-align: right;
+    padding-left: 100px;}
+
+#indigo h1 {
+    text-shadow: 5px 5px #9933FF;}
+#indigo h2 {
+    font-size: 30px;
+    color: #663399;}
+#indigo img {
+    width: 100px;
+    height: 100px;}
+
+#indigo figcaption {
+    padding-left: 230px;
+    width: 600px;
+    font-size: 25px;}
+
+
+/* V I O L E T */
+#violet {
+    background-image: url(project/violet.jpg);
+    background-size: cover;
+    background-color: #FF99FF;
+    color: white;
+    padding-right: 300px;}
+
+#violet h1 {
+    text-shadow: 5px 5px #FF0099;}
+#violet h2 {
+    font-size: 30px;
+    color: #990066;}
+#violet img {
+    width: 100px;
+    height: 100px;}
+
+#violet figcaption {
+    width: 600px;
+    font-size: 25px;}
+
+
+/* G R A Y */
+#gray {
+    background-image: url(project/gray.jpg);
+    background-size: cover;
+    background-color: #666666;
+    color: white;
+    text-align: center;}
+
+#gray h1 {
+    text-shadow: 5px 5px #333333;}
+#gray h2 {
+    font-size: 30px;
+    color: #333333;}
+#gray img {
+    width: 100px;
+    height: 100px;}
+
+#gray figcaption {
+    font-size: 25px;}
+
+
+/* F O O T E R  */
+footer {
+    background-color: #333333;
+    color: #ffffff; }
+    
+footer p {
+    font-size: 20px;}
+footer h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0px; }
+
+footer a {
+    color: #333333; 
+    font-weight: bold;
+    padding: 8px;
+        
+    animation-name: rainbow;
+    animation-duration: 15s;
+    animation-iteration-count: infinite; }
+
+footer a:hover {    
+    animation-name: rainbow;
+    animation-duration: 15s;
+    animation-iteration-count: infinite; }
+

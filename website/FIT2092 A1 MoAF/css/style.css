@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* ANIMATIONS */
+
+@keyframes spaced {
+    0% {letter-spacing: ;}
+    50% {letter-spacing: 0.2vmin;}
+    100% {letter-spacing: ;}
+}
+@keyframes godown {
+    0.0% { }
+    50% {transform: translate(0vmin, 1vmin);}
+    100% { }
+}
+@keyframes goup {
+    0.0% { }
+    50% {transform: translate(0vmin, -1vmin);}
+    100% { }
+}
+@keyframes grow {
+    0% {transform: scale(1); }
+    50% {transform: scale(1.1); }
+    100% {transform: scale(1); }
+}
+@keyframes skewed {
+    0.0% {transform: ; }
+    33% {transform: skew(8deg); }
+    66% {transform: skew(-8deg); }    
+    100% {transform: ; }
+}
+@keyframes revealed {
+    from {opacity: 0%; }
+    to {opacity: 100%; }
+}
+
+@keyframes swim {
+    0.0% {transform: skew(5deg) translate(0) rotate(10deg); }
+    33% {transform: skew(-20deg) translate(10vmin, 5vmin) rotate(20deg); }
+    66% {transform: skew(-10deg) translate(20vmin, -0vmin) rotate(-20deg); }
+    100% {transform: skew(0deg) translate(45vmin, 2vmin) rotate(10deg); }    
+}
+
+/* GENERAL */
+
+body {
+    height: 100vh;
+    overflow: hidden; }
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 6vmin;
+    color: #d89a1c;
+    padding-bottom: 2vmin; }
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3vmin;
+    color:#19a1ba; 
+    padding-left: 2vmin; 
+    font-style: italic;}
+p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8vmin;
+    color: #fff7e0; }
+div p {
+    margin: 1vmin; }
+
+a {
+    text-decoration: none;
+    color: #fff7e0; }
+button a:hover {
+    animation-name: spaced;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+nav a:hover {
+    animation-name: spaced;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; }
+
+section {
+    width: 100%; height: 100vh; padding: 20vh 15vw;
+    display: flex;
+    align-items: center; justify-content: space-around;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+div {
+    margin: 1.5vmin; }
+
+#arrow {
+    font-size: 4vmin; color: #d89a1c;
+    animation: godown 3s ease 0s infinite normal none; 
+    padding-bottom: 5vmin; padding-top: 3vmin;
+    display: flex;
+    justify-content: flex-end;
+}
+#arrowup {
+    font-size: 4vmin; color: #d89a1c;
+    animation: goup 3s ease 0s infinite normal none; 
+    padding-bottom: 5vmin; padding-top: 3vmin;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* LOADER */
+
+#loading {
+    position: fixed; z-index: 2; top: 0; left: 0;
+    background: #d89a1c;
+    font-family: 'Montserrat', sans-serif; font-size: 4vmin;
+    color: #fff7e0; }
+.loaded {
+    opacity: 0;
+    transition: opacity 2s;
+    pointer-events: none;
+}
+
+
+/* NAV */
+
+#logo {
+    position: fixed;
+    justify-content: flex-start;
+    top: 5vmin; left: 5vmin;
+    width: 15vmin;
+    animation: skewed 5s ease 0s infinite normal none;
+}
+
+nav {
+    position: fixed;
+    top: 5vmin; left: 5vmin;
+    z-index: 1;
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+    display: flex;
+    justify-content:flex-end;
+}
+nav a {
+    display: inline-block; width: 4vmin; height: 4vmin; margin-left: 5vmin;
+    background: none;
+    border: 2px solid #d89a1c; border-radius: 60%;
+    font-size: 1vmin; text-align: center; line-height: 4vmin;
+    transition: 0.5s;
+}
+nav .selected { background:rgba(255, 247, 224, 0.25); }
+
+
+/* ABOUT US */
+#about {   
+    background: #914933 url(bark.jpg);
+    background-blend-mode: multiply; background-size: cover;
+    justify-content: center;
+}
+
+#about video {
+    width: 40vw;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.53);
+    margin-top: 10vmin;
+}
+
+#about button {
+    height: 4vmin;
+    background: none;
+    border: 1px solid #fff7e0; border-radius: 10%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vmin; line-height: 3.5vmin;
+    margin-left: 15vmin; margin-top: 3vmin;
+    animation: grow 3s ease 0s infinite normal none;
+    display: flex; justify-content: flex-end;
+}
+
+
+/* NAV1 - LEOPEER */
+
+#leopeer {
+    background: #98753d url(leaves.jpg) ;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    font-family: Playfair Display, serif; color: white;
+    justify-content:space-between;
+}
+#leopeer img {
+    width: 45vmin;
+}
+
+#leopeer button{
+    border: 0px solid #fff7e0; border-radius: 20%;
+    background: rgba(216, 154, 28, 0.3);
+    font-family: 'Montserrat', sans-serif; font-size: 2vmin;
+    color: white;
+    padding: 1vmin;
+    margin-left: 2vmin;
+}
+#leopeer button:hover{
+    animation: grow 3s ease 0s infinite normal none;
+    text-decoration: underline;
+}
+
+
+/* NAV2 - ALBINO LEOPEER */
+
+#leopeerVar {
+    position: relative;
+    overflow: hidden;       
+    background: rgba(5, 124, 137, 0.53) url(snow.jpg);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    color: white;
+}
+#leopeerVar h2 {
+    color: #dd4820;
+}
+#leopeerVar img{
+    height: 50vmin;
+}
+
+#fact {
+    display: none;
+    position:fixed; z-index: 1;
+    left: 0; top: 20vmin;
+    width: 100%; height: 100%;
+    overflow: auto;
+}
+#fact p{
+    font-size: 2vmin;
+}
+.modal-content {
+    background-color: rgba(145, 73, 51, 0.6);
+    margin: 15% auto;
+    padding: 2.5vmin;
+    border: 2px solid #d89a1c; border-radius: 10%;
+    width: 90%;
+}
+.close {
+    color: #d89a1c;
+    font-size: 6vmin;
+    float: right;
+}
+.close:hover, .close:focus {
+    color: #ca3912; text-decoration: none;
+}
+
+#factBtn {
+    background: none;
+    border: 2px solid #e0a224; border-radius: 10%;
+    color: #fff7e0;
+    padding: 1.3vmin; margin-left: 20vmin;
+}
+#factBtn:hover {
+    animation-name: spaced;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+
+/* NAV3 - GECKARK */
+
+#geckark {
+    background-image: url(ocean.jpg), linear-gradient(rgba(202, 57, 18, 0.50), rgba(255, 255, 255, 0));
+    background-blend-mode: multiply, normal;
+    background-size: cover;
+}
+
+#geckark img {
+    height: 25vmin;
+    transform: rotateY(180deg);
+}
+#geckarkDesc {
+    padding-left: 50vmin;
+}
+
+.hide {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    left: 8vmin;
+}
+
+.myDIV{
+    position: absolute;
+    left: 8vmin;
+}
+.myDIV:hover + .hide {
+    display:block;
+
+}
+
+#fishe {
+    position: absolute;
+    animation: swim 6s ease 0s infinite normal forwards;
+    right: 15vmin;    
+}
+
+/* NAV4 - SECRETS */
+#secrets {
+    background: rgba(145, 73, 51, 0.8) url(library.jpg);
+    background-blend-mode: multiply; 
+    background-size: cover;
+}
+#secrets img {
+    height: 20vmin;
+}
+#secrets img:hover {
+    animation: grow 3s ease 0s infinite normal none;
+}
+
+/* NAV5 - NEWSLETTER */
+#newsletter {
+    background:  url(flowers.jpg), linear-gradient(#ba8314, #914933);
+    background-blend-mode: multiply, normal;
+    background-size: cover;
+}
+#newsletter img {
+    height: 10vmin;
+}
+#copyright{
+    color: #e0a224;
+}
+
+#newsletter button {
+    background: none;
+    border: 1px solid #e0a224; border-radius: 10%;
+    padding: 1.2vmin;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 3vmin;
+    margin-bottom: 2vmin;
+}
+#newsletter button:hover {
+    text-decoration: underline;
+}
+
+#donation {
+    -webkit-appearance: none;
+    background: rgba(255, 247, 224, 0.2);
+    opacity: 0.7; transition: opacity 0.3s;
+    height: 2vmin;
+}
+#donation:hover {
+    opacity: 1;
+}
+#donation::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #057c89;
+    height: 2vmin; width: 2vmin;
+    border-radius: 50%;
+}
+
+#error {
+    border: 1.5px solid #ca3912; border-radius: 10%;
+    background-color: rgba(226, 173, 158, 0.6);
+    padding: 1.5vmin;
+    display: none;
+    color: #fff7e0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+input, select, textarea, button {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.5vmin;
+    vertical-align: middle;
+}
+
+#remaining {
+    font-size: 2vmin; color: #e0a224;
+}
+
+#newsletterForm button {
+    background: rgba(224, 162, 36, 0.3); 
+    border: 1px solid #e0a224; border-radius: 10%;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 1.5vmin;
+    color: #fff7e0; }
+
+#confirm {
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2vmin;
+    color: #e0a224;
+    display: none;
+}
