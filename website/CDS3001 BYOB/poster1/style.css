@@ -1,0 +1,74 @@
+@font-face {
+    font-family: '1';
+    src: url('avara.woff') format('woff');
+}
+/* GENERAL */
+* {
+    transition: 0.5s; }
+body {
+    background-color: black;
+    font-family: '1';
+    padding-left: 20%;
+    padding-top: 2%;
+    overflow: hidden; }
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    position:fixed;
+    top: 0; left: 0;
+    font-size: 4vmin;
+    font-family: monospace; }
+button:hover {
+    opacity: 50%; }
+
+/* SECTIONS */
+div.info{
+    position: fixed;
+    z-index: -1;
+    color: white;
+    left: 3%;
+    opacity: 90%;
+    padding-right: 85%;
+    margin-top: 5vh;
+    font-size: 3vmin; }
+
+div.small {
+    font-size: 2vmin;
+    text-align: center;
+    padding: 2vmin;
+    border-top: 1px solid black; }
+
+div.poster {
+    background-color: black;
+    width: 75%;
+    border: 1px solid white; }
+
+div.text {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px; }
+
+    
+/* RULES */
+div.text.one{
+    font-size: 2vmin; }
+div.text.two {
+    font-size: 5vmin; }
+div.text.three {
+    font-size: 8vmin; }
+
+div.text.a {
+    transform: skew(-20deg); }
+div.text.b {
+    transform: skew(0deg); }
+div.text.c {
+    transform: skew(20deg); }
+
+div.text.x {
+    color: white; }
+div.text.y {
+    color: darkcyan; }
+div.text.z {
+    color: darkorange; }

@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>dpub '22 / byob</title>
+
+        <h1>bring your own beamer</h1>
+        <h2>byob for cds3001 sem1 2022. <br>
+            a collection of randomised posters <br>within a set of elements.</h2>
+        
+        <nav>
+            <p> type posters </p>
+            <a href="poster1/index.html">halloween</a>
+            <a href="poster2/index.html">gothic</a>
+            <a href="poster3/index.html">sea foam</a>
+            
+            <p>graphic posters</p>
+            <a href="poster4/index.html">candy store</a>
+            <a href="poster5/index.html">temperature</a>
+            
+            <p>image posters</p>
+            <a href="poster6/index.html">ascii</a>
+            <a href="poster7/index.html">peach</a>
+        </nav>
+
+         <div class="box"> </div> 
+
+    <style>
+            @font-face {
+                font-family: '1';
+                 src: url('basteleur.woff') format('woff'); }
+            ::-webkit-scrollbar { width: 2px;}
+                 
+            body {
+                overflow: hidden;
+                background: linear-gradient(360deg, rgb(48, 74, 105) 0%, rgb(190, 104, 123) 48%, rgb(216, 184, 123) 100%);
+                background-color: #355070;
+                font-family:'1';
+                font-size: 2.8vh;
+                color: white; }
+
+            h1 {
+                color: #355070;
+                text-align: center;
+                font-size: 6vh;
+                border-bottom: 5px dotted white;
+                text-shadow: 5px 5px 1px rgba(255, 255, 255, 0.8);
+                padding: 1.5vmin;
+                margin-top: 3%;
+                transition: 1s; }
+            h1:hover {
+                color: #cb7185;
+                transition: 0.8s;
+                letter-spacing: 3px; }
+
+            h2 {
+                margin-left: 8%;
+                font-size: 3vh;
+                color: #eac98b; }
+
+            nav {
+                font-family: monospace;
+                text-align: left;
+                margin-left: 8%;
+            }
+            nav a {
+                font-family: '1';
+                text-decoration: none;
+                color: #eac98b;
+                border-bottom: 5px dotted white;
+                margin-left: 30px;
+                transition: 1s;}
+            nav a:hover {
+                text-shadow: 5px 5px 1px rgba(53, 79, 112, 0.8);
+                transition: 0.8s; }
+
+            img {
+                pointer-events: none;
+                -webkit-user-drag: none;
+                width: 55vh;
+                position: absolute;
+                bottom: 3%; right: 3%;
+                mix-blend-mode:overlay;
+                opacity: 0.5;
+            }
+           
+            div.box { 
+                background-color: #355070;
+                width: 5%;
+                position: absolute;
+                top: 0%; left: 0%;
+                height: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <img src="draw.png" oncontextmenu="return false"/>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+@font-face {
+    font-family: '1';
+    src: url('fesse_clear.woff') format('woff');
+}
+
+/* GENERAL */
+body {
+    overflow: hidden;
+    background-image: url("texture.gif");
+    background-size: cover;
+    background-color: black;
+    background-position: 50%;
+}
+* {
+    transition: 0.8s;
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    position:fixed;
+    top: 0; left: 0;
+    font-size: 4vmin;
+    font-family: 'monospace'; }
+button a {
+    text-decoration: none;
+    color: black;
+}
+button:hover {
+    opacity: 40%; }
+
+/* SECTIONS */
+div.container {
+    display: flexbox;
+    flex-wrap: wrap;
+    margin-left: 5%;
+}
+
+div.text {
+    color: black;
+    padding: 1.5vh;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10vh;
+    
+    font-family: '1';
+    font-size: 5vmin;
+    font-weight: bolder;
+    text-align: center;
+
+    padding: 4vmin;
+    margin-bottom: 1vmin;
+    margin-right: 5vmin;
+}
+
+h1 {
+    font-family: courier;
+    font-size: 2vh;
+    text-align: center;
+    padding: 3vh;
+    color: rgb(140, 43, 89);
+}
+
+/* RULES */
+div.text.one{
+    opacity: 1; }
+div.text.two { 
+    opacity: 0.6; }
+div.text.three {
+    opacity: 0.2; }
+
+div.text.a{
+    transform: skew(-10deg);}
+div.text.b { 
+    transform: skew(0deg); }
+div.text.c {
+    transform: skew(10deg); }
