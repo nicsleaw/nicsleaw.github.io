@@ -133,3 +133,23 @@ nav a:hover {
     box-shadow: #264653 6px 6px 1px;
     color: #264653;
 }
+
+.carousel {
+    background: #EEE;
+}
+.carousel-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
