@@ -25,7 +25,7 @@
 body a {
     text-decoration: underline;
     font-family: '1';
-    font-size: 30px;
+    font-size: 28px;
     color: #2A9D8F;
 }
 body a:hover {
@@ -60,7 +60,7 @@ h1:hover {
 }
 
 h2 {
-    font-size: 23px;
+    font-size: 24px;
     font-family: '1';
     font-weight: lighter;
     letter-spacing: 4px;
@@ -86,7 +86,7 @@ body img {
     margin-bottom: 10px;
     padding: 5px;
     
-    border-radius: 5%;
+    border-radius: 25%;
     border: #264653 2px solid;
 }
 body img:hover {
@@ -96,7 +96,7 @@ body img:hover {
 .column {
     width: 30%;
     padding: 20px;
-    border: 2px solid black;
+    border: 1.5px solid black;
     background-color: rgba(38, 70, 83, 0.25);
 }
 
@@ -104,12 +104,12 @@ body img:hover {
 .column2 {
     width: 70%;
     padding: 20px;
-    border: 2px solid black;
+    border: 1.5px solid black;
 }
 .column3 {
     width: 50%;
     padding: 20px;
-    border: 2px solid black;
+    border: 1.5px solid black;
 }
 
 nav {
@@ -137,7 +137,6 @@ nav a:hover {
 }
 
 .container {
-    border-top: #264653 2px solid;
     width: 100%;
     overflow: scroll;
 }
@@ -145,7 +144,15 @@ nav a:hover {
     width: 200%;
     padding: 10px;
 }
-.container img {
-    height: 300px;
-    margin-right: 10px;
+
+embed {
+    height: 80vh;
+    width: 80vw;
+    padding: 10px;
+    margin: auto;
+}
+video {
+    padding-top: 30px;
+    width: 80vw;
+    margin: auto;
 }
