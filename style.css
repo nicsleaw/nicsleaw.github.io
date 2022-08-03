@@ -55,6 +55,7 @@ h1 {
     letter-spacing: 3px;
     font-style: italic;
     text-transform: capitalize;
+    border-bottom: 1.5px solid black;
 }
 h1:hover {
     letter-spacing: 6px;
@@ -94,6 +95,18 @@ body img:hover {
     box-shadow: rgba(231, 111, 81, 0.8) 7px 7px 1px;
 }
 
+a img {
+    height: 35px; width: 35px;
+    border: none;
+    margin: auto;
+    display: inline-block;
+    opacity: 0.6;
+}
+a img:hover {
+    box-shadow: none;
+    opacity: 0.3;
+}
+
 .column {
     width: 30%;
     padding: 20px;
@@ -110,6 +123,11 @@ body img:hover {
     width: 50%;
     padding: 20px;
     border: 1.5px solid black;
+}
+.column4 {
+    margin: auto;
+    width: 70%;
+    padding-top: 10px;
 }
 
 nav {
@@ -143,11 +161,10 @@ nav a:hover {
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    border: 2px solid black;
-    margin-top: 20px;
+    border-top: 2px solid black;
 }
 .scroll-box {
-    width: 200%;
+    width: 240%;
 }
 .items {
     height: 80vh; width: 45vw;
@@ -158,11 +175,6 @@ embed {
     height: 80vh;
     width: 45vw;
     padding: 10px;
-    margin: auto;
-}
-video {
-    padding-top: 30px;
-    width: 70%;
     margin: auto;
 }
 figcaption {
