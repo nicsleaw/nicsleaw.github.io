@@ -13,6 +13,7 @@
 ::-webkit-scrollbar-thumb:hover{
     background-color: #264653;}
 
+/* G E N E R A L */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -100,7 +101,6 @@ body img:hover {
     background-color: rgba(38, 70, 83, 0.25);
 }
 
-
 .column2 {
     width: 70%;
     padding: 20px;
@@ -136,23 +136,37 @@ nav a:hover {
     color: #264653;
 }
 
-.container {
-    width: 100%;
-    overflow: scroll;
-}
-.container2 {
-    width: 200%;
-    padding: 10px;
-}
 
+/* D E S I G N */
+.container {
+    padding: 20px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    border: 2px solid black;
+    margin-top: 20px;
+}
+.scroll-box {
+    width: 200%;
+}
+.items {
+    height: 80vh; width: 45vw;
+    display: inline-block;
+    /* border: 1px solid black; */
+}
 embed {
     height: 80vh;
-    width: 80vw;
+    width: 45vw;
     padding: 10px;
     margin: auto;
 }
 video {
     padding-top: 30px;
-    width: 80vw;
+    width: 70%;
     margin: auto;
+}
+figcaption {
+    width: 90%; 
+    /* border: 1px solid black; */
+    margin:auto;
 }
