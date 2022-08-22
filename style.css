@@ -23,28 +23,27 @@
 }
 
 body a {
-    text-decoration: underline;
+    text-decoration: none;
     font-family: '1';
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     color: #2A9D8F;
     transition: 0.5s;
 }
 body a:hover {
-    color: #d89761;
-    font-size: 3.3vmin;
-}
+    color: #d89761; }
 
+/* BACK BUTTON */
 .home a {
     text-decoration: none;
     position: absolute;
     color: #2A9D8F;
-    font-size: 25px;
-    top: 20px; left: 15px;
+    font-size: 3vmin;
+    top: 2vmin; left: 1.5vmin;
     transition: 0.5s;
 }
 .home a:hover {
     color: #264653;
-    font-size: 25px;
+    font-size: 3vmin;
 }
 
 h1 {
@@ -86,9 +85,8 @@ body img {
     width: 25vmin;
     display: block;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
+    margin-bottom: 0.6vmin;
+    padding: 0.5vmin;
     
     border-radius: 25%;
     border: #264653 2px solid;
@@ -99,7 +97,7 @@ body img:hover {
 }
 
 a img {
-    height: 35px; width: 35px;
+    height: 4vmin; width: 4vmin;
     border: none;
     margin: auto;
     display: inline-block;
@@ -113,19 +111,22 @@ a img:hover {
 
 .column {
     width: 40%;
-    padding: 20px;
+    padding: 2vmin;
     border: 1.5px solid black;
     background-color: rgba(38, 70, 83, 0.25);
+}
+.column img {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .column2 {
     width: 60%;
-    padding: 20px;
+    padding: 2vmin;
     border: 1.5px solid black;
 }
 .column3 {
     width: 50%;
-    padding: 20px;
+    padding: 2vmin;
     border: 1.5px solid black;
 }
 .column4 {
@@ -158,32 +159,41 @@ nav a:hover {
     background-color: rgba(42, 157, 144, 0.4);
     box-shadow: #264653 6px 6px 1px;
     color: #264653;
-    font-size: 3.5vmin;
+    font-size: 3vmin;
 }
 
 
-/* D E S I G N */
+/* SCROLL BOX */
 .container {
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    border-top: 2px solid black;
+    border-top: 1px solid black;
 }
 .scroll-box {
-    width: 240%;
+    width: 250vmin;
 }
 .items {
-    height: 80vh; width: 45vw;
-    display: inline-block;
+    display:inline-block;
     /* border: 1px solid black; */
 }
 embed {
-    height: 80vh;
-    width: 45vw;
-    padding: 10px;
+    display: inline-block;
+    height: 75vmin; width: 60vmin;
+    padding: 0.5vmin;
     margin: auto;
 }
+video {
+    padding: 0.5vmin;   
+    border-radius: 5%;
+    border: #264653 1.8px solid;
+    transition: 0.5s;
+}
+video:hover {
+    box-shadow: rgba(231, 111, 81, 0.8) 7px 7px 1px;
+}
+
 figcaption {
     width: 90%; 
     /* border: 1px solid black; */
