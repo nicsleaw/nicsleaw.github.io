@@ -8,10 +8,10 @@
 ::-webkit-scrollbar {
     background-color: rgba(255, 255, 255, 0.2);
     height: 8px; width: 5px; }
-::-webkit-scrollbar-thumb{
-    background-color: #2A9D8F;}
-::-webkit-scrollbar-thumb:hover{
-    background-color: #264653;}
+::-webkit-scrollbar-thumb {
+    background-color: #2A9D8F; }
+::-webkit-scrollbar-thumb:hover {
+    background-color: #264653; }
 
 /* G E N E R A L */
 * {
@@ -19,7 +19,6 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     scroll-behavior: smooth;
-    transition: 0.5s;
     color: #264653, #2A9D8F, #e6da71, #d89761, #E76F51;
 }
 
@@ -28,10 +27,11 @@ body a {
     font-family: '1';
     font-size: 3vmin;
     color: #2A9D8F;
+    transition: 0.5s;
 }
 body a:hover {
     color: #d89761;
-    font-size: 32px;
+    font-size: 3.3vmin;
 }
 
 .home a {
@@ -40,6 +40,7 @@ body a:hover {
     color: #2A9D8F;
     font-size: 25px;
     top: 20px; left: 15px;
+    transition: 0.5s;
 }
 .home a:hover {
     color: #264653;
@@ -56,6 +57,7 @@ h1 {
     font-style: italic;
     text-transform: capitalize;
     border-bottom: 1.5px solid black;
+    transition: 0.5s;
 }
 h1:hover {
     letter-spacing: 6px;
@@ -90,6 +92,7 @@ body img {
     
     border-radius: 25%;
     border: #264653 2px solid;
+    transition: 0.5s;
 }
 body img:hover {
     box-shadow: rgba(231, 111, 81, 0.8) 7px 7px 1px;
@@ -101,6 +104,7 @@ a img {
     margin: auto;
     display: inline-block;
     opacity: 0.6;
+    transition: 0.5s;
 }
 a img:hover {
     box-shadow: none;
@@ -137,21 +141,24 @@ nav {
     text-align: center;
     font-family: '1';
     font-size: 4vmin;
+    line-height: 4vmin;
 }
 nav a {
-    margin-right: 3vmin;
+    margin-right: 2.5vmin;
     text-decoration: none;
     color: #264653;
 
     background-color: rgba(216, 151, 97, 0.8);
     padding: 8px;
-    border: #264653 3px dashed;
+    border: #264653 0.4vmin dashed;
     border-radius: 10px;
+    transition: 0.5s;
 }
 nav a:hover {
     background-color: rgba(42, 157, 144, 0.4);
     box-shadow: #264653 6px 6px 1px;
     color: #264653;
+    font-size: 3.5vmin;
 }
 
 
