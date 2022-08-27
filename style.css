@@ -55,7 +55,7 @@ h1 {
     letter-spacing: 3px;
     font-style: italic;
     text-transform: capitalize;
-    border-bottom: 1.5px solid black;
+    border-bottom: 1vmin solid black;
     transition: 0.5s;
 }
 h1:hover {
@@ -76,7 +76,7 @@ body {
     width: 100vw;
     overflow:scroll;
     overflow-x: hidden;
-    background: rgb(206, 206, 206);
+    background: rgb(212, 212, 212);
 
     font-family: 'Spectral';
     font-size: 1.9vmin;
@@ -89,7 +89,7 @@ body img {
     padding: 0.5vmin;
     
     border-radius: 25%;
-    border: #264653 2px solid;
+    border: #264653 1vmin solid;
     transition: 0.5s;
 }
 body img:hover {
@@ -112,8 +112,8 @@ a img:hover {
 .column {
     width: 40%;
     padding: 2vmin;
-    border: 1.5px solid black;
-    background-color: rgba(38, 70, 83, 0.25);
+    border: 1vmin solid black;
+    background-color: rgba(38, 70, 83, 0.2);
 }
 .column img {
     background-color: rgba(255, 255, 255, 0.2);
@@ -122,12 +122,12 @@ a img:hover {
 .column2 {
     width: 60%;
     padding: 2vmin;
-    border: 1.5px solid black;
+    border: 1vmin solid black;
 }
 .column3 {
     width: 50%;
     padding: 2vmin;
-    border: 1.5px solid black;
+    border: 1vmin solid black;
 }
 .column4 {
     margin: auto;
@@ -136,7 +136,7 @@ a img:hover {
 }
 
 nav {
-    border-top: #264653 1px solid;
+    border-top: #264653 1vmin solid;
     padding: 20px;
     width: 100%;
     text-align: center;
@@ -163,13 +163,13 @@ nav a:hover {
 }
 
 
-/* SCROLL BOX */
+/* 3D SPECIFIC CSS */
 .container {
     padding: 10px;
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    border-top: 1px solid black;
+    border-top: 1vmin solid black;
 }
 .scroll-box {
     width: 250vmin;
@@ -184,18 +184,23 @@ embed {
     padding: 0.5vmin;
     margin: auto;
 }
+/* DESIGN SPECIFIC CSS */
 video {
     padding: 0.5vmin;   
     border-radius: 5%;
-    border: #264653 1.8px solid;
+    border: #264653 1vmin solid;
     transition: 0.5s;
 }
 video:hover {
     box-shadow: rgba(231, 111, 81, 0.8) 7px 7px 1px;
 }
-
+/* 2D SPECIFIC CSS */
 figcaption {
-    width: 90%; 
-    /* border: 1px solid black; */
+    width: 80%; 
     margin:auto;
+    text-align: center;
+    font-family: 'Spectral';
+    font-weight: bold;
+    font-size: 1.5vmin;
+    color: #264653;
 }
