@@ -55,7 +55,7 @@ h1 {
     letter-spacing: 3px;
     font-style: italic;
     text-transform: capitalize;
-    border-bottom: 1vmin solid black;
+    border-bottom: 0.1vmin solid black;
     transition: 0.5s;
 }
 h1:hover {
@@ -89,7 +89,7 @@ body img {
     padding: 0.5vmin;
     
     border-radius: 25%;
-    border: #264653 1vmin solid;
+    border: #264653 0.3vmin solid;
     transition: 0.5s;
 }
 body img:hover {
@@ -104,15 +104,11 @@ a img {
     opacity: 0.6;
     transition: 0.5s;
 }
-a img:hover {
-    box-shadow: none;
-    opacity: 0.3;
-}
 
 .column {
     width: 40%;
     padding: 2vmin;
-    border: 1vmin solid black;
+    border: 0.1vmin solid black;
     background-color: rgba(38, 70, 83, 0.2);
 }
 .column img {
@@ -122,12 +118,12 @@ a img:hover {
 .column2 {
     width: 60%;
     padding: 2vmin;
-    border: 1vmin solid black;
+    border: 0.1vmin solid black;
 }
 .column3 {
     width: 50%;
     padding: 2vmin;
-    border: 1vmin solid black;
+    border: 0.1vmin solid black;
 }
 .column4 {
     margin: auto;
@@ -136,7 +132,7 @@ a img:hover {
 }
 
 nav {
-    border-top: #264653 1vmin solid;
+    border-top: #264653 0.1vmin solid;
     padding: 20px;
     width: 100%;
     text-align: center;
@@ -151,7 +147,7 @@ nav a {
 
     background-color: rgba(216, 151, 97, 0.8);
     padding: 8px;
-    border: #264653 0.4vmin dashed;
+    border: #264653 0.3vmin dashed;
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -169,14 +165,13 @@ nav a:hover {
     width: 100%;
     overflow-x: scroll;
     overflow-y: hidden;
-    border-top: 1vmin solid black;
+    border-top: 0.1vmin solid black;
 }
 .scroll-box {
     width: 250vmin;
 }
 .items {
     display:inline-block;
-    /* border: 1px solid black; */
 }
 embed {
     display: inline-block;
@@ -188,7 +183,7 @@ embed {
 video {
     padding: 0.5vmin;   
     border-radius: 5%;
-    border: #264653 1vmin solid;
+    border: #264653 0.1vmin solid;
     transition: 0.5s;
 }
 video:hover {
