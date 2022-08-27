@@ -19,7 +19,7 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     scroll-behavior: smooth;
-    color: #264653, #2A9D8F, #e6da71, #d89761, #E76F51;
+    color: #264653, #2A9D8F, #ddd084, #d89761, #E76F51;
 }
 
 body a {
@@ -36,7 +36,6 @@ body a:hover {
 .home a {
     text-decoration: none;
     position: absolute;
-    color: #2A9D8F;
     font-size: 3vmin;
     top: 2vmin; left: 1.5vmin;
     transition: 0.5s;
@@ -55,7 +54,7 @@ h1 {
     letter-spacing: 3px;
     font-style: italic;
     text-transform: capitalize;
-    border-bottom: 0.1vmin solid black;
+    border-bottom: 0.1vmin solid #264653;;
     transition: 0.5s;
 }
 h1:hover {
@@ -71,8 +70,7 @@ h2 {
 }
 
 body {
-    display: flex;
-    flex-wrap:wrap;
+    display: flex; flex-wrap:wrap;
     width: 100vw;
     overflow:scroll;
     overflow-x: hidden;
@@ -82,48 +80,44 @@ body {
     font-size: 1.9vmin;
 }
 body img {
-    width: 25vmin;
+    width: 30vmin;
     display: block;
     margin: auto;
     margin-bottom: 0.6vmin;
-    padding: 0.5vmin;
-    
     border-radius: 25%;
     border: #264653 0.3vmin solid;
     transition: 0.5s;
 }
-body img:hover {
-    box-shadow: rgba(231, 111, 81, 0.8) 7px 7px 1px;
-}
+body img:hover {box-shadow: rgba(231, 111, 81, 0.8) 7px 7px 1px; }
 
 a img {
     height: 4vmin; width: 4vmin;
-    border: none;
+    border: 0.1vmin solid #264653;
     margin: auto;
     display: inline-block;
-    opacity: 0.6;
     transition: 0.5s;
 }
 
 .column {
     width: 40%;
     padding: 2vmin;
-    border: 0.1vmin solid black;
+    border: 0.1vmin solid #264653;
     background-color: rgba(38, 70, 83, 0.2);
 }
 .column img {
     background-color: rgba(255, 255, 255, 0.2);
+    border: none;
 }
 
 .column2 {
     width: 60%;
     padding: 2vmin;
-    border: 0.1vmin solid black;
+    border: 0.1vmin solid #264653;
 }
 .column3 {
     width: 50%;
     padding: 2vmin;
-    border: 0.1vmin solid black;
+    border: 0.1vmin solid #264653;
 }
 .column4 {
     margin: auto;
@@ -133,7 +127,8 @@ a img {
 
 nav {
     border-top: #264653 0.1vmin solid;
-    padding: 20px;
+    background-color: rgb(212, 212, 212);
+    padding: 2vmin;
     width: 100%;
     text-align: center;
     font-family: '1';
@@ -144,18 +139,17 @@ nav a {
     margin-right: 2.5vmin;
     text-decoration: none;
     color: #264653;
-
-    background-color: rgba(216, 151, 97, 0.8);
+    background-color: #d89761;
     padding: 8px;
     border: #264653 0.3vmin dashed;
     border-radius: 10px;
     transition: 0.5s;
 }
 nav a:hover {
-    background-color: rgba(42, 157, 144, 0.4);
+    background-color: #ddd084;
     box-shadow: #264653 6px 6px 1px;
-    color: #264653;
-    font-size: 3vmin;
+    color: #2A9D8F;
+    font-size: 2.8vmin;
 }
 
 
@@ -175,8 +169,8 @@ nav a:hover {
 }
 embed {
     display: inline-block;
-    height: 75vmin; width: 60vmin;
-    padding: 0.5vmin;
+    height: 70vmin; width: 55vmin;
+    padding-left: 2vmin;
     margin: auto;
 }
 /* DESIGN SPECIFIC CSS */
