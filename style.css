@@ -86,6 +86,18 @@ section {
 #anims iframe {
     width: 45vmin; height: 25vmin;
 }
+iframe {
+    width: 80%; height: 60vmin;
+}
+button {
+    border: 2px #1f1f1f solid;
+    padding: 1.5vmin;
+    margin-top: 2vmin;
+    font-family: 'link'; font-size: 2vmin;
+}
+button:hover {
+    background-color: #1f1f1f; color: #f1f1f1;
+}
 
 #html img{
     width: 30%; }
