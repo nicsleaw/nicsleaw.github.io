@@ -1,30 +1,37 @@
+/* FONTS */
 @font-face {
     font-family: 'trickster';
     src: url('fonts/trickster.woff') format('woff');
 }
-
 @font-face {
     font-family: 'link';
-    src: url('fonts/BackOut.woff') format('woff');
+    src: url('fonts/avara.woff') format('woff');
 }
 
-
+/* ANIMATIONS */
 @keyframes spaced {
     0% {letter-spacing: none;}
-    50% {letter-spacing: 0.3vmin;}
+    50% {letter-spacing: 0.25vmin;}
     100% {letter-spacing: none;}
 }
 @keyframes upbob {
     0.0% {}
-    50% {transform: translate(0vmin, -1vmin);}
+    50% {transform: translate(0vmin, -2vmin);}
     100% {}
 }
 
+/* GENERAL */
 ::selection {
     background: #1f1f1f;
     color: #f1f1f1;
 }
-
+::-webkit-scrollbar {
+    background-color: #ffffff;
+    width: 1vmin;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(0, 0, 0, 0.9);
+}
 
 * {
     margin: 0;
@@ -37,7 +44,7 @@ body {
     height: 100vh;
     overflow-x: hidden;
     text-align: center;
-    background-color: #f1f1f1;
+
 }
 
 h1 {
@@ -55,7 +62,7 @@ h1:hover {
 p {
     font-family:monospace;
     font-size: 1.8vmin;
-    width: 60%;
+    width: 50%;
     margin: auto;
 }
 
@@ -63,17 +70,20 @@ a {
     text-decoration: none;
     color: #1f1f1f;
     margin-left: 3vmin;
-    font-family: 'link'; font-size: 3vmin;
+    font-family: 'link'; font-size: 2.5vmin;
 }
 a:hover {
-    text-decoration: underline;
     opacity: 0.5;
     text-transform: uppercase;
+
+    animation-name: spaced;
+    animation-duration: 1.5s;
+    animation-iteration-count:infinite;
 }
 
 
 nav {
-    position: fixed; width: 100%;
+    position: fixed; width: 100%; 
     z-index: 1;
     background: linear-gradient(0deg, rgba(0,0,0,0) 0%, #f1f1f1 30%, #f1f1f1 100%);
     padding-top: 2vmin; padding-bottom: 3vmin;
@@ -81,19 +91,44 @@ nav {
 
 section {
     width: 100vw;
-    padding-top: 15vmin;
+    padding-top: 5vmin; padding-bottom: 10vmin;
     display: flexbox;
-}
+    background: linear-gradient(0deg, rgba(241,241,241,1) 0%, rgba(223,223,223,1) 100%);
 
+}
+#about {
+    padding-top: 10vmin;
+}
 #about iframe {
     width: 80vmin; height: 45vmin;
 }
 #anims iframe {
-    width: 45vmin; height: 25vmin;
+    width: 40%; height: 25vw;
+    padding: 1vmin;
+}
+
+#design img{
+    padding-top: 1vmin;
 }
 iframe {
     width: 70%; height: 70vmin;
 }
+.half {
+    display: table-cell;
+    width: 40%;
+    padding-left: 2vmin; padding-right: 2vmin;
+    font-family: monospace;
+    font-size: 1.8vmin;
+}
+.third {
+    display: table-cell;
+    width: 30%;
+    padding-left: 2vmin; padding-right: 2vmin;
+    padding-bottom: 1vmin;
+    font-family: monospace;
+    font-size: 1.8vmin;
+}
+
 button {
     border: 2px #1f1f1f solid;
     padding: 1.5vmin;
@@ -106,6 +141,11 @@ button:hover {
 
 #html img{
     width: 30%; }
+
+#digiart img {
+    width: 20%; height: 20%;
+    padding: 5px;
+}
 
 #jump a {
     text-decoration: none;
