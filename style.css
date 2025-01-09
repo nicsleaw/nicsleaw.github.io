@@ -8,6 +8,7 @@
     src: url('media/basteleur.woff') format('woff');
 }*/
 
+
 /* ANIMATIONS */
 @keyframes spaced {
     0% {letter-spacing: 0.01vmin;}
